@@ -3,10 +3,9 @@ import pymem
 #Memory
 pm = pymem.Pymem('hl2.exe')
 client = pymem.pymem.process.module_from_name(pm.process_handle, 'client.dll').lpBaseOfDll
-engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
 
-OffEntityList = 0x0071957C
-OffLocalPlayer = pm.read_uint(client + 0x006FD274)
+OffEntityList = 0x007539A4
+OffLocalPlayer = pm.read_uint(client + 0x007377A4)
 OffHealth = 0x90
 OffTeam = 0x9C
 OffCoordsX = 0x314
